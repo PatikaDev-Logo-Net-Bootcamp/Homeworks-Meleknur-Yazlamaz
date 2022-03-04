@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\Models",
+    "\\obj\\Debug",
+    "\\obj\\Debug\\netcoreapp3.1",
+    "\\obj\\Debug\\netcoreapp3.1\\Razor",
+    "\\obj\\Debug\\netcoreapp3.1\\Razor\\Views",
+    "\\obj\\Release",
+    "\\obj\\Release\\netcoreapp3.1",
+    "\\Properties"
+  ],
+  "SelectedNode": "\\Homework-1.csproj",
+  "PreviewInSolutionExplorer": false
+}

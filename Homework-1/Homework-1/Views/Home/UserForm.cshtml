@@ -1,10 +1,12 @@
-﻿@{
+﻿
+@*Changing the Home Page*@
+@{
     ViewData["Title"] = "Home Page";
 }
 
 @model UserViewModel
 
-@*User Form for Login Page*@
+@*Creating a form with FirstName, LastName, Email and Password fields*@
 
 <html>
 
@@ -44,11 +46,7 @@
 </body>
 </html>
 
-@* Custom View for Properties of the Response Class*@
-
-@Html.Raw(ViewData["Data"])
-@Html.Raw(ViewData["Success"])
-@Html.Raw(ViewData["Error"])
+@*Creating Custom Views for Properties of the Response Class:"Data","Success","Error"*@
 
 <html>
 <head>
@@ -91,6 +89,11 @@
     </style>
 </head>
 </html>
+
+@Html.Raw(ViewData["Data"])
+@Html.Raw(ViewData["Success"])
+@Html.Raw(ViewData["Error"])
+
 
 
 

@@ -60,7 +60,7 @@ namespace Homework_1.Controllers
 
                 return View();
             }
-
+              // Using custom views to display properties of the Response Class
             ViewData["Data"] = "<div class='data-unvalid'>" + "Data: " + user.Data + "</div>";
             ViewData["Success"] = "<div class='success-unvalid'>" + "Success: " + user.Success + "</div>";
             ViewData["Error"] = "<div class='error-unvalid'>" + "Error: " + user.Error + "</div>";

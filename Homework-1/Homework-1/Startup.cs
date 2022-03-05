@@ -50,6 +50,7 @@ namespace Homework_1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    // Setting "action" field for change the Home Page
                     pattern: "{controller=Home}/{action=UserForm}/{id?}");
             });
         }

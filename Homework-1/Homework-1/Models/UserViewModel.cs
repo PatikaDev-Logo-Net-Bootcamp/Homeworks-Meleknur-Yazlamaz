@@ -2,10 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace Homework_1.Models
-{
+{    
     public class UserViewModel
     {
         public int Id { get; set; }
+
+        // Creating necessary validations for each form field
 
         [Display(Name = "İsim")]
         [Required(ErrorMessage = "İsim alanı zorunludur!")]

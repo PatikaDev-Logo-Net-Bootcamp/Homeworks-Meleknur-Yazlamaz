@@ -45,6 +45,7 @@ namespace Homework_1.Controllers
             // Checking server-side validation proceess
             if (ModelState.IsValid)
             {
+                // If validations are provided, send success note to user
                 var newUser = new Response
                 {
                     Data = "Giriş İşlemi Başarılı! Hoşgeldiniz :)",
@@ -53,17 +54,20 @@ namespace Homework_1.Controllers
 
                 };
 
-                // Transferring the data from Controller to View
-                ViewData["Data"] = "<div class='data-valid'>" + "Data: " + newUser.Data + "</div>";
-                ViewData["Success"] = "<div class='success-valid'>" + "Success: " + newUser.Success + "</div>";
-                ViewData["Error"] = "<div class='error-valid'>" + "Error: " + newUser.Error + "</div>";
+                // Using custom views to display properties of the Response Class
+                // Transferring data from Controller to View
+                ViewData["Data"] = "<div class='data-valid'>" + "<b>" + "Data: " + newUser.Data + "</b>" + "</div>";
+                ViewData["Success"] = "<div class='success-valid'>" + "<b>" + "Success: " + newUser.Success + "</b>" + "</div>";
+                ViewData["Error"] = "<div class='error-valid'>" + "<b>" + "Error: " + newUser.Error + "</b>" + "</div>";
 
                 return View();
             }
-              // Using custom views to display properties of the Response Class
-            ViewData["Data"] = "<div class='data-unvalid'>" + "Data: " + user.Data + "</div>";
-            ViewData["Success"] = "<div class='success-unvalid'>" + "Success: " + user.Success + "</div>";
-            ViewData["Error"] = "<div class='error-unvalid'>" + "Error: " + user.Error + "</div>";
+
+            // If validations are fail, send error note to user
+            ViewData["Data"] = "<div class='data-unvalid'>" + "<b>" + "Data: " + user.Data + "</b>" + "</div>";
+            ViewData["Success"] = "<div class='success-unvalid'>" + "<b>" + "Success: " + user.Success + "</b>" + "</div>";
+            ViewData["Error"] = "<div class='error-unvalid'>" + "<b>" + "Error: " + user.Error + "</b>" + "</div>";
+
 
             return View(model);
         }

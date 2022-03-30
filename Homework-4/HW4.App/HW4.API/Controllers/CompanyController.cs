@@ -89,7 +89,7 @@ namespace HW4.App.Controllers
             var company = companyService.GetCompany(x => x.Id == id);
             if (company != null)
             {
-                // First change saved data in the database
+                // First change the data saved in the database
                 company.Name = model.Name;
                 company.Address = model.Address;
                 company.Country = model.Country;

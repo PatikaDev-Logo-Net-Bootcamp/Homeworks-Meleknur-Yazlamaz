@@ -53,12 +53,12 @@ namespace HW4.App.Controllers
             // Getting company information by id
             var company = companyService.GetCompany(x => x.Id == id);
             return Ok(company);
-            
+
         }
 
         [Route("AddCompany")]
         [HttpPost]
-        public IActionResult Post([FromBody] CompanyDto model)
+        public IActionResult Insert([FromBody] CompanyDto model)
         {
             companyService.InsertCompany(new Company
             {
@@ -81,18 +81,38 @@ namespace HW4.App.Controllers
                 });
         }
 
-        [Route("UpdateCompany")]
-        [HttpPut]
-        public IActionResult Put([FromBody] Company model)
+        // "id" field is required on Swagger Header
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] CompanyDto model)
         {
-            companyService.UpdateCompany(model);
+            // Updating company information by id
+            var company = companyService.GetCompany(x => x.Id == id);
+            if (company != null)
+            {
+                // First change saved data in the database
+                company.Name = model.Name;
+                company.Address = model.Address;
+                company.Country = model.Country;
+                company.City = model.City;
+                company.Location = model.Location;
+                company.Phone = model.Phone;
+                company.Description = model.Description;
 
-            return Ok(
-                new CompanyResponseModel
-                {
-                    Data = "Company Updated Successfully!",
-                    Success = true
-                });
+                // Then update it
+                companyService.UpdateCompany(company);           
+                
+                return Ok(
+                    new CompanyResponseModel
+                    {
+                        Data = "Company Updated Successfully!",
+                        Success = true
+                    });
+            }
+            return BadRequest(new CompanyResponseModel
+            {
+                Data = "Company Not Found!",
+                Success = false
+            });
         }
 
         // "id" field is required on Swagger Header
@@ -103,6 +123,7 @@ namespace HW4.App.Controllers
             var company = companyService.GetCompany(x => x.Id == id);
             if (company != null)
             {
+                companyService.DeleteCompany(company);
                 return Ok(new CompanyResponseModel
                 {
                     Data = $"Company with Id:{id} Deleted successfully!",

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HW4.App.DataAccess.EF.Migrations
+namespace HW4.App.DataAccess.EntityFramework.Migrations
 {
     public partial class AddCompanyTable : Migration
     {

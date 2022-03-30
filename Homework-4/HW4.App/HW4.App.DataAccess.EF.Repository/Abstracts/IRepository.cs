@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace HW4.App.DataAccess.EF.Repository.Abstracts
+namespace HW4.App.DataAccess.EntityFramework.Repository.Abstracts
 {
     public interface IRepository<T> where T : BaseEntity
     {

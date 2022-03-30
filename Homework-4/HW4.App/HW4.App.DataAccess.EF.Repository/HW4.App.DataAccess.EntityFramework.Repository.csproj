@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HW4.App.DataAccess.EF\HW4.App.DataAccess.EF.csproj" />
+    <ProjectReference Include="..\HW4.App.DataAccess.EF\HW4.App.DataAccess.EntityFramework.csproj" />
     <ProjectReference Include="..\HW4.App.Domain\HW4.App.Domain.csproj" />
   </ItemGroup>
 

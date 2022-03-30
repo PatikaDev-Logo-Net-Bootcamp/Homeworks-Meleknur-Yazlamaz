@@ -1,11 +1,11 @@
-﻿using HW4.App.DataAccess.EF.Repository.Abstracts;
+﻿using HW4.App.DataAccess.EntityFramework.Repository.Abstracts;
 using HW4.App.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace HW4.App.DataAccess.EF.Repository.Concretes
+namespace HW4.App.DataAccess.EntityFramework.Repository.Concretes
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {

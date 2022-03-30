@@ -1,8 +1,8 @@
-﻿using HW4.App.DataAccess.EF.Configurations;
+﻿using HW4.App.DataAccess.EntityFramework.Configurations;
 using HW4.App.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace HW4.App.DataAccess.EF
+namespace HW4.App.DataAccess.EntityFramework
 {
     public class AppDbContext : DbContext
     {

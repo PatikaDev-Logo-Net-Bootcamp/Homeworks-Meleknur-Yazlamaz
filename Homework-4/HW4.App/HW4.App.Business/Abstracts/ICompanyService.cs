@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace HW4.App.Business.Abstract
+namespace HW4.App.Business.Abstracts
 {
     public interface ICompanyService
     {

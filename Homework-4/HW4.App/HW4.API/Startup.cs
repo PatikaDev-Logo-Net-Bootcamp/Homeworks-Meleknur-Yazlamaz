@@ -1,10 +1,8 @@
 using HW4.App.Filters;
-using HW4.App.Business.Abstract;
 using HW4.App.Business.Abstracts;
 using HW4.App.Business.Concretes;
-using HW4.App.DataAccess.EF;
-using HW4.App.DataAccess.EF.Repository.Abstracts;
-using HW4.App.DataAccess.EF.Repository.Concretes;
+using HW4.App.DataAccess.EntityFramework.Repository.Abstracts;
+using HW4.App.DataAccess.EntityFramework.Repository.Concretes;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,7 +14,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.Text;
-
+using HW4.App.DataAccess.EntityFramework;
 
 namespace HW4.App
 {

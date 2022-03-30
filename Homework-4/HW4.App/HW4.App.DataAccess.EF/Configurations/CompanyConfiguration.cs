@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HW4.App.DataAccess.EF.Configurations
+namespace HW4.App.DataAccess.EntityFramework.Configurations
 {
     public class CompanyConfiguration : IEntityTypeConfiguration<Company>
     {

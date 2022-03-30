@@ -1,5 +1,5 @@
 ﻿using HW4.App.Business.Abstracts;
-using HW4.App.DataAccess.EF.Repository.Abstracts;
+using HW4.App.DataAccess.EntityFramework.Repository.Abstracts;
 using HW4.App.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HW4.App.DataAccess.EF.Repository.Abstracts
+namespace HW4.App.DataAccess.EntityFramework.Repository.Abstracts
 {
     public interface IUnitOfWork : IDisposable
     {

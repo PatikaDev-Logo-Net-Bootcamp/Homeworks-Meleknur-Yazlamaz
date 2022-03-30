@@ -1,6 +1,6 @@
-﻿using HW4.App.DataAccess.EF.Repository.Abstracts;
+﻿using HW4.App.DataAccess.EntityFramework.Repository.Abstracts;
 
-namespace HW4.App.DataAccess.EF.Repository.Concretes
+namespace HW4.App.DataAccess.EntityFramework.Repository.Concretes
 {
     public class UnitOfWork : IUnitOfWork
     {

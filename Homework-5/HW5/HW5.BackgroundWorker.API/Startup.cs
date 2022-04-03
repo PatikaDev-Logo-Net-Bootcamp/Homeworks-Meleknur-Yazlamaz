@@ -42,7 +42,7 @@ namespace HW5.BackgroundWorker.API
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IPostService, PostService>();
 
-            // Background Queue for Background Proccessing
+            // Background Queue Structure for Background Processing
             services.AddSingleton<IBackgroundQueue<Post>, BackgroundQueue<Post>>();
             // Background Services
             services.AddHostedService<RecorderWorker>();

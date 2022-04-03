@@ -11,7 +11,6 @@ namespace HW5.DataAccess.EntityFramework.Configurations
         {
             builder.ToTable("Posts");
             builder.HasKey(x => x.DbId);
-
         }
     }
 }

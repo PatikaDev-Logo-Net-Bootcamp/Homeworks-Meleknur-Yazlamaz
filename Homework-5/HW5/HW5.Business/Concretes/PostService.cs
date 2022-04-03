@@ -15,7 +15,7 @@ namespace HW5.Business.Concretes
             this.unitOfWork = unitOfWork;
         }
 
-        // Adding all posts to the database.
+        // Adding posts to the database.
         public void AddPosts(Post post)
         {
             repository.Add(post);

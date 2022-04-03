@@ -6,7 +6,7 @@ namespace HW5.Domain.Entities
     public class Post
     {
         // Fixed Entity Framework (DbUpdateException) Error: Cannot insert explicit value for identity column in table.
-        // Solution: Setting the Identity Column Manually
+        // Solution: Setting the Identity Column Manually.
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int DbId { get; set; }

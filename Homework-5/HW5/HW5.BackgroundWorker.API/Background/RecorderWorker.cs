@@ -40,6 +40,7 @@ namespace HW5.BackgroundWorker.API.Background
                 try
                 {
                     await Task.Delay(300, stoppingToken);
+                    // The data is recording in the database at certain intervals with the queue structure.
                     var post = queue.Dequeue();
                     if (post == null) continue;
 

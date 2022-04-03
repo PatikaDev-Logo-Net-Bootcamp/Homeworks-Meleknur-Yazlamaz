@@ -36,6 +36,7 @@ namespace HW5.BackgroundWorker.API.Background
                     var response = await request.Content.ReadAsStringAsync();
 
                     var posts = JsonConvert.DeserializeObject<List<Post>>(response);
+                    // Newtonsoft.Json: JsonConvert -> It provides methods for converting between .NET types and JSON types.
 
                     foreach (var post in posts)
                     {
@@ -48,7 +49,7 @@ namespace HW5.BackgroundWorker.API.Background
                     logger.LogError("Error while proccessing getting data!");
                 }
                 await Task.Delay(60000, stoppingToken);
-                // Capturing data once in a minute
+                // Capturing data with HTTP request once in a minute.
             }
         }
 

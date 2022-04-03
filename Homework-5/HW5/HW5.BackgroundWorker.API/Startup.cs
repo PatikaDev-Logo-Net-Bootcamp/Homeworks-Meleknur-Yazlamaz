@@ -30,14 +30,21 @@ namespace HW5.BackgroundWorker.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "HW5.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = " HW5.BackgroundWorker.API", Version = "v1" });
             });
 
+            // Adding all defined services:
+            // Database Connection Service
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+
+            // AddTransient() -> A new instance of a Transient service is created each time it is requested.
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IPostService, PostService>();
+
+            // Background Queue for Background Proccessing
             services.AddSingleton<IBackgroundQueue<Post>, BackgroundQueue<Post>>();
+            // Background Services
             services.AddHostedService<RecorderWorker>();
             services.AddHostedService<RetrieverWorker>();
 
@@ -50,7 +57,7 @@ namespace HW5.BackgroundWorker.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BackgroundQueue.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", " HW5.BackgroundWorker.API v1"));
             }
 
             app.UseHttpsRedirection();
